@@ -92,6 +92,18 @@ public class DoublyLinkedList<E> {
         public void setNext(Node<E> n) { next = n; }
     } //----------- end of nested Node class -----------
 
+
+    public int sizeDLL() {
+        int size = 1;
+        for (Node n = ; n.next != null; n = n.next){
+            if (n == null){
+                return 0;
+            }
+            size++;
+        }
+        return size;
+    }
+
     // instance variables of the DoublyLinkedList
     /** Sentinel node at the beginning of the list */
     private Node<E> header;                    // header sentinel
