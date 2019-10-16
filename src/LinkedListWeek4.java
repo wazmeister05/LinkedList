@@ -22,15 +22,11 @@ public class LinkedListWeek4 {
         sll.addLast("four");
         sll.addLast("five");
         sll.addLast("six");
-        System.out.println(sll.sizeSLL());
-        //doesn't work with empty list
 
         cll.addFirst("one");
         cll.addFirst("two");
         cll.addFirst("three");
         cll.addFirst("four");
-        System.out.println(cll.sizeCLL());
-        //doesn't work with empty list
 
         dll.addFirst("one");
         dll.addFirst("two");
@@ -41,7 +37,24 @@ public class LinkedListWeek4 {
         dll.addFirst("seven");
         dll.addFirst("eight");
         dll.addFirst("nine");
-        System.out.println(dll.sizeDLL());
-        //doesn't work
+
+        try {
+            System.out.println(sll.sizeSLL());
+        }catch(NullPointerException e){
+            System.out.println("List Empty");
+        }
+            //doesn't work with empty list
+
+        try {
+            System.out.println(cll.sizeCLL());
+        }catch(NullPointerException e){
+            System.out.println("List Empty");
+        }
+
+        try {
+            System.out.println(dll.sizeDLL());
+        }catch(NullPointerException e){
+            System.out.println("List Empty");
+        }
     }
 }

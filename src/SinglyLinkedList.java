@@ -95,16 +95,7 @@ public class SinglyLinkedList<E> implements Cloneable {
      * Returns the number of elements in the linked list.
      * @return number of elements in the linked list
      */
-    public int sizeSLL(){
-        int size = 1;
-        for (Node n = head; n.next != null; n = n.next){
-            if (n == null){
-                return 0;
-            }
-            size++;
-        }
-        return size;
-    }
+
 
     /**
      * Tests whether the linked list is empty.
@@ -228,5 +219,16 @@ public class SinglyLinkedList<E> implements Cloneable {
         }
         sb.append(")");
         return sb.toString();
+    }
+
+    public int sizeSLL(){
+        int size = 1;
+        for (Node n = head; n.next != null; n = n.next){
+            if (n == null){
+                return 0;
+            }
+            size++;
+        }
+        return size;
     }
 }

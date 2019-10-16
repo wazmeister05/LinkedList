@@ -76,17 +76,6 @@ public class CircularlLinkedList<E> {
         public void setNext(Node<E> n) { next = n; }
     } //----------- end of nested Node class -----------
 
-    public int sizeCLL(){
-        int size = 1;
-        for (Node n = tail; n.next != tail; n = n.next){
-            if (n == null) {
-                return 0;
-            }else {
-                size++;
-            }
-        }
-        return size;
-    }
 
     // instance variables of the CircularlyLinkedList
     /** The designated cursor of the list */
@@ -191,5 +180,18 @@ public class CircularlLinkedList<E> {
         } while (walk != tail);
         sb.append(")");
         return sb.toString();
+    }
+
+
+    public int sizeCLL(){
+        int size = 1;
+        for (Node n = tail; n.next != tail; n = n.next){
+            if (n == null) {
+                return 0;
+            }else {
+                size++;
+            }
+        }
+        return size;
     }
 }

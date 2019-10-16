@@ -93,17 +93,6 @@ public class DoublyLinkedList<E> {
     } //----------- end of nested Node class -----------
 
 
-    public int sizeDLL() {
-        int size = 1;
-        for (Node n = ; n.next != null; n = n.next){
-            if (n == null){
-                return 0;
-            }
-            size++;
-        }
-        return size;
-    }
-
     // instance variables of the DoublyLinkedList
     /** Sentinel node at the beginning of the list */
     private Node<E> header;                    // header sentinel
@@ -232,5 +221,16 @@ public class DoublyLinkedList<E> {
         }
         sb.append(")");
         return sb.toString();
+    }
+
+    public int sizeDLL() throws NullPointerException {
+        int size = 1;
+        for (Node n = header.next; n.next != trailer; n = n.next){
+            if (n == null){
+                return 0;
+            }
+            size++;
+        }
+        return size;
     }
 } //----------- end of DoublyLinkedList class -----------
